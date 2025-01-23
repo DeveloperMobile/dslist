@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.entities;
 
 import jakarta.persistence.*;
+import org.w3c.dom.Text;
 
 import java.util.Objects;
 
@@ -18,7 +19,11 @@ public class Game {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() { }
